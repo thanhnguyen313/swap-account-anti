@@ -52,11 +52,6 @@ Antigravity 2.x lưu tài khoản đang đăng nhập trong OS credential store
 (`antigravityUnifiedStateSync.oauthToken` / `userStatus`). App ghi cả hai trong
 lúc IDE đã tắt, rồi mở lại IDE. Chi tiết: xem `docs/system-architecture.md`.
 
-## Lưu ý bảo mật
-- File token chứa `refresh_token` thật — **không commit lên git** (đã có
-  `.gitignore`).
-- Dữ liệu account được lưu cục bộ tại `~/.antigravity-swapper/`.
-
 ## Cấu trúc
 ```
 electron/   main process, preload, IPC
