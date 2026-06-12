@@ -1,0 +1,19 @@
+# Sensitive: real Antigravity refresh tokens — never commit
+anti token/
+*.token.json
+
+# Secrets / OAuth credentials — keep out of git (CI injects them at build time)
+.env
+.env.*
+!.env.example
+
+# Build output
+dist/
+out/
+
+# Dependencies
+node_modules/
+
+# OS / editor junk
+.DS_Store
+*.log

@@ -1,0 +1,74 @@
+{
+  "name": "antigravity-swapper",
+  "version": "0.1.0",
+  "description": "Cross-platform (macOS + Windows + Linux) app to swap between Antigravity accounts via token JSON, with live quota display",
+  "main": "electron/main.js",
+  "author": "Thành Nguyên",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --mac",
+    "dist:mac": "electron-builder --mac",
+    "dist:win": "electron-builder --win",
+    "dist:linux": "electron-builder --linux"
+  },
+  "dependencies": {
+    "sql.js": "^1.14.1"
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.thanhnguyen.antigravity-swapper",
+    "productName": "app tao code",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "electron/**",
+      "src/**",
+      "renderer/**",
+      ".env",
+      "node_modules/sql.js/dist/sql-wasm.wasm",
+      "node_modules/sql.js/dist/sql-wasm.js",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": "arm64"
+        }
+      ],
+      "identity": null
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": "x64"
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "category": "Development",
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": "x64"
+        },
+        {
+          "target": "deb",
+          "arch": "x64"
+        }
+      ]
+    }
+  }
+}
