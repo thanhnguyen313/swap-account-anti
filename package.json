@@ -24,7 +24,8 @@
     "appId": "com.thanhnguyen.antigravity-swapper",
     "productName": "app tao code",
     "directories": {
-      "output": "dist"
+      "output": "dist",
+      "buildResources": "icons"
     },
     "files": [
       "electron/**",
