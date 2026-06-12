@@ -60,6 +60,7 @@
     },
     "linux": {
       "category": "Development",
+      "icon": "icons/png",
       "target": [
         {
           "target": "AppImage",
